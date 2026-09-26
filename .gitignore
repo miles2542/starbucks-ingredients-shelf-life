@@ -8,6 +8,7 @@ build/
 .next/
 out/
 .turbo/
+*.tsbuildinfo
 
 # Environment
 .env
@@ -16,9 +17,7 @@ out/
 !.env.example
 
 # Runtime & agent internals
-logs/
 temp/
-dev_docs/
 .scratch/
 
 # OS / Editor
