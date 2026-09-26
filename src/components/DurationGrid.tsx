@@ -45,7 +45,7 @@ export const DurationGrid: React.FC<DurationGridProps> = ({
       {activeBuckets.map((bucket) => (
         <section
           key={bucket.label}
-          className="bg-white dark:bg-[#1C1C1E] border border-black/[0.08] dark:border-white/[0.12] rounded-2xl p-3.5 sm:p-5 lg:p-7 shadow-[0_2px_12px_rgba(0,0,0,0.03)] dark:shadow-[0_2px_12px_rgba(0,0,0,0.4)]"
+          className="bg-white dark:bg-[#1C1C1E] border border-black/[0.08] dark:border-white/[0.12] rounded-2xl p-[1.1rem] sm:p-5 lg:p-7 shadow-[0_2px_12px_rgba(0,0,0,0.03)] dark:shadow-[0_2px_12px_rgba(0,0,0,0.4)]"
         >
           <header className="pb-3 mb-3.5 sm:pb-4 sm:mb-5 border-b border-black/[0.06] dark:border-white/[0.08] flex items-center justify-between">
             <h2 className="text-sm font-bold tracking-tight text-[#1C1C1E] dark:text-[#FFFFFF]">

@@ -67,7 +67,7 @@ export const Header: React.FC<HeaderProps> = ({
   });
 
   return (
-    <header className="sticky top-0 z-50 bg-[#F2F2F7]/90 dark:bg-[#000000]/90 backdrop-blur-xl border-b border-black/[0.08] dark:border-white/[0.12] px-2.5 sm:px-4 lg:px-6 py-2.5">
+    <header className="sticky top-0 z-50 bg-[#F2F2F7]/90 dark:bg-[#000000]/90 backdrop-blur-xl border-b border-black/[0.08] dark:border-white/[0.12] px-[0.7rem] sm:px-4 lg:px-6 py-2.5">
       <div className="max-w-7xl mx-auto flex items-center justify-between gap-2">
         {/* Left: Day of week, Date, and 24h Timestamp */}
         <div className="flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-[#1C1C1E] dark:text-[#FFFFFF] select-none">
@@ -164,11 +164,11 @@ export const Header: React.FC<HeaderProps> = ({
       <div className="max-w-7xl mx-auto mt-2 pt-2 border-t border-black/[0.05] dark:border-white/[0.06]">
         {/* Mobile View: Single Line Flex with Views Dropdown and Search */}
         <div className="flex md:hidden items-center gap-2 relative" ref={dropdownRef}>
-          {/* Views Button with dynamic Chevron */}
+          {/* Views Button with darker/greyer background so lighter search bar draws attention */}
           <button
             type="button"
             onClick={() => setIsViewDropdownOpen((prev) => !prev)}
-            className="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-white dark:bg-[#1C1C1E] border border-black/[0.08] dark:border-white/[0.12] text-xs font-semibold text-[#1C1C1E] dark:text-[#FFFFFF] shadow-xs active:bg-black/[0.05] shrink-0"
+            className="flex items-center gap-1.5 h-9 px-3 rounded-xl bg-[#E5E5EA] dark:bg-[#2C2C2E] hover:bg-[#D1D1D6] dark:hover:bg-[#3A3A3C] active:bg-[#C7C7CC] text-xs font-semibold text-[#3C3C43] dark:text-[#EBEBF5] border border-black/[0.04] dark:border-white/[0.06] shadow-xs shrink-0 transition-colors"
             aria-haspopup="true"
             aria-expanded={isViewDropdownOpen}
           >
@@ -227,9 +227,9 @@ export const Header: React.FC<HeaderProps> = ({
             </div>
           )}
 
-          {/* Mobile Search Input */}
+          {/* Mobile Search Input with fixed vertical alignment and proper pl-9 indent */}
           <div className="relative flex-1">
-            <div className="absolute left-3 top-2.5 text-[#8E8E93] pointer-events-none">
+            <div className="absolute left-3 top-1/2 -translate-y-1/2 text-[#8E8E93] pointer-events-none flex items-center">
               <svg
                 className="w-3.5 h-3.5"
                 viewBox="0 0 24 24"
@@ -250,13 +250,13 @@ export const Header: React.FC<HeaderProps> = ({
               value={searchQuery}
               onChange={(e) => onSearchChange(e.target.value)}
               placeholder="Search ingredients (Eng and Vie)"
-              className="w-full text-xs py-2 pl-8.5 pr-8 rounded-xl bg-white dark:bg-[#1C1C1E] border border-black/[0.08] dark:border-white/[0.12] text-[#1C1C1E] dark:text-white placeholder-[#8E8E93] focus:ring-2 focus:ring-[#006241]/40 focus:border-[#006241] shadow-xs font-normal"
+              className="w-full h-9 text-xs pl-9 pr-8 rounded-xl bg-white dark:bg-[#1C1C1E] border border-black/[0.1] dark:border-white/[0.12] text-[#1C1C1E] dark:text-white placeholder-[#8E8E93] focus:ring-2 focus:ring-[#006241]/40 focus:border-[#006241] shadow-xs font-normal transition-all"
             />
             {searchQuery ? (
               <button
                 type="button"
                 onClick={() => onSearchChange('')}
-                className="absolute right-2.5 top-2 text-[#8E8E93] hover:text-[#1C1C1E] dark:hover:text-white p-0.5"
+                className="absolute right-2.5 top-1/2 -translate-y-1/2 text-[#8E8E93] hover:text-[#1C1C1E] dark:hover:text-white p-1 flex items-center"
                 title="Clear search"
                 aria-label="Clear search"
               >
@@ -315,7 +315,7 @@ export const Header: React.FC<HeaderProps> = ({
 
           {/* Desktop Search Bar */}
           <div className="relative w-80 lg:w-96">
-            <div className="absolute left-3.5 top-2.5 text-[#8E8E93] pointer-events-none">
+            <div className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[#8E8E93] pointer-events-none flex items-center">
               <svg
                 className="w-3.5 h-3.5"
                 viewBox="0 0 24 24"
@@ -342,7 +342,7 @@ export const Header: React.FC<HeaderProps> = ({
               <button
                 type="button"
                 onClick={() => onSearchChange('')}
-                className="absolute right-3 top-2 text-[#8E8E93] hover:text-[#1C1C1E] dark:hover:text-white p-0.5"
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-[#8E8E93] hover:text-[#1C1C1E] dark:hover:text-white p-0.5 flex items-center"
                 title="Clear search"
                 aria-label="Clear search"
               >

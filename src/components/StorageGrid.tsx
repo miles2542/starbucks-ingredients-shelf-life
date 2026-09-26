@@ -27,7 +27,7 @@ export const StorageGrid: React.FC<StorageGridProps> = ({
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 items-start">
       {ambientItems.length > 0 && (
-        <section className="bg-white dark:bg-[#1C1C1E] border border-black/[0.08] dark:border-white/[0.12] rounded-2xl p-3.5 sm:p-5 lg:p-7 shadow-[0_2px_12px_rgba(0,0,0,0.03)] dark:shadow-[0_2px_12px_rgba(0,0,0,0.4)]">
+        <section className="bg-white dark:bg-[#1C1C1E] border border-black/[0.08] dark:border-white/[0.12] rounded-2xl p-[1.1rem] sm:p-5 lg:p-7 shadow-[0_2px_12px_rgba(0,0,0,0.03)] dark:shadow-[0_2px_12px_rgba(0,0,0,0.4)]">
           <header className="pb-3 mb-3.5 sm:pb-4 sm:mb-5 border-b border-black/[0.06] dark:border-white/[0.08] flex items-center justify-between">
             <div className="flex items-center gap-2">
               <span className="w-2.5 h-2.5 rounded-xs bg-amber-500 inline-block" />
@@ -46,7 +46,7 @@ export const StorageGrid: React.FC<StorageGridProps> = ({
       )}
 
       {coldItems.length > 0 && (
-        <section className="bg-white dark:bg-[#1C1C1E] border border-black/[0.08] dark:border-white/[0.12] rounded-2xl p-3.5 sm:p-5 lg:p-7 shadow-[0_2px_12px_rgba(0,0,0,0.03)] dark:shadow-[0_2px_12px_rgba(0,0,0,0.4)]">
+        <section className="bg-white dark:bg-[#1C1C1E] border border-black/[0.08] dark:border-white/[0.12] rounded-2xl p-[1.1rem] sm:p-5 lg:p-7 shadow-[0_2px_12px_rgba(0,0,0,0.03)] dark:shadow-[0_2px_12px_rgba(0,0,0,0.4)]">
           <header className="pb-3 mb-3.5 sm:pb-4 sm:mb-5 border-b border-black/[0.06] dark:border-white/[0.08] flex items-center justify-between">
             <div className="flex items-center gap-2">
               <span className="w-2.5 h-2.5 rounded-xs bg-cyan-500 inline-block" />

@@ -120,7 +120,7 @@ export const StationGrid: React.FC<StationGridProps> = ({
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 items-start">
         {/* MASTRENA STATION */}
         {hasMastrena && (
-          <section className="bg-white dark:bg-[#1C1C1E] border border-black/[0.08] dark:border-white/[0.12] rounded-2xl p-3.5 sm:p-5 lg:p-7 shadow-[0_2px_12px_rgba(0,0,0,0.03)] dark:shadow-[0_2px_12px_rgba(0,0,0,0.4)]">
+          <section className="bg-white dark:bg-[#1C1C1E] border border-black/[0.08] dark:border-white/[0.12] rounded-2xl p-[1.1rem] sm:p-5 lg:p-7 shadow-[0_2px_12px_rgba(0,0,0,0.03)] dark:shadow-[0_2px_12px_rgba(0,0,0,0.4)]">
             <header className="pb-3 mb-3.5 sm:pb-4 sm:mb-5 border-b border-black/[0.06] dark:border-white/[0.08]">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
@@ -162,7 +162,7 @@ export const StationGrid: React.FC<StationGridProps> = ({
 
         {/* CBS STATION */}
         {hasCbs && (
-          <section className="bg-white dark:bg-[#1C1C1E] border border-black/[0.08] dark:border-white/[0.12] rounded-2xl p-3.5 sm:p-5 lg:p-7 shadow-[0_2px_12px_rgba(0,0,0,0.03)] dark:shadow-[0_2px_12px_rgba(0,0,0,0.4)]">
+          <section className="bg-white dark:bg-[#1C1C1E] border border-black/[0.08] dark:border-white/[0.12] rounded-2xl p-[1.1rem] sm:p-5 lg:p-7 shadow-[0_2px_12px_rgba(0,0,0,0.03)] dark:shadow-[0_2px_12px_rgba(0,0,0,0.4)]">
             <header className="pb-3 mb-3.5 sm:pb-4 sm:mb-5 border-b border-black/[0.06] dark:border-white/[0.08]">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
@@ -211,7 +211,7 @@ export const StationGrid: React.FC<StationGridProps> = ({
           </h3>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 items-start">
             {hasCondiment && (
-              <section className="bg-white dark:bg-[#1C1C1E] border border-black/[0.08] dark:border-white/[0.12] rounded-2xl p-3.5 sm:p-5 lg:p-7 shadow-[0_2px_12px_rgba(0,0,0,0.03)] dark:shadow-[0_2px_12px_rgba(0,0,0,0.4)]">
+              <section className="bg-white dark:bg-[#1C1C1E] border border-black/[0.08] dark:border-white/[0.12] rounded-2xl p-[1.1rem] sm:p-5 lg:p-7 shadow-[0_2px_12px_rgba(0,0,0,0.03)] dark:shadow-[0_2px_12px_rgba(0,0,0,0.4)]">
                 <header className="pb-3 mb-3.5 sm:pb-4 sm:mb-5 border-b border-black/[0.06] dark:border-white/[0.08]">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
@@ -235,7 +235,7 @@ export const StationGrid: React.FC<StationGridProps> = ({
             )}
 
             {hasOthers && (
-              <section className="bg-white dark:bg-[#1C1C1E] border border-black/[0.08] dark:border-white/[0.12] rounded-2xl p-3.5 sm:p-5 lg:p-7 shadow-[0_2px_12px_rgba(0,0,0,0.03)] dark:shadow-[0_2px_12px_rgba(0,0,0,0.4)]">
+              <section className="bg-white dark:bg-[#1C1C1E] border border-black/[0.08] dark:border-white/[0.12] rounded-2xl p-[1.1rem] sm:p-5 lg:p-7 shadow-[0_2px_12px_rgba(0,0,0,0.03)] dark:shadow-[0_2px_12px_rgba(0,0,0,0.4)]">
                 <header className="pb-3 mb-3.5 sm:pb-4 sm:mb-5 border-b border-black/[0.06] dark:border-white/[0.08]">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">

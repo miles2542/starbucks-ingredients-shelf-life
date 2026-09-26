@@ -409,7 +409,7 @@ export const INGREDIENTS: readonly Ingredient[] = [
     storage: 'ambient',
     shelfLifeDays: 14,
     shelfLifeDisplay: '14 days',
-    dosingTool: '2 tbsp (thìa 2 tbsp)',
+    dosingTool: '2 tbsp',
   },
   {
     id: 'pure-matcha-powder',
@@ -421,7 +421,7 @@ export const INGREDIENTS: readonly Ingredient[] = [
     storage: 'ambient',
     shelfLifeDays: 7,
     shelfLifeDisplay: '7 days',
-    dosingTool: 'Matcha spoon (thìa matcha)',
+    dosingTool: 'Matcha spoon (thìa Matcha)',
   },
   {
     id: 'hojicha-powder',
@@ -701,7 +701,7 @@ export const INGREDIENTS: readonly Ingredient[] = [
     storage: 'refrigerated',
     shelfLifeDays: 5,
     shelfLifeDisplay: '5 days',
-    dosingTool: 'Holed spoon',
+    dosingTool: 'Holed spoon (thìa lỗ)',
   },
   {
     id: 'earl-grey-jelly',
@@ -725,7 +725,7 @@ export const INGREDIENTS: readonly Ingredient[] = [
     storage: 'refrigerated',
     shelfLifeDays: 1,
     shelfLifeDisplay: '1 day',
-    dosingTool: '15ml spoon',
+    dosingTool: '15ml spoon (thìa 15ml)',
   },
   {
     id: 'matcha-sauce',
