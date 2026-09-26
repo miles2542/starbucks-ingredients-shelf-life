@@ -53,7 +53,7 @@ export const IngredientRow: React.FC<IngredientRowProps> = ({
       </td>
       <td className="py-2.5 sm:py-3 px-2 sm:px-3 whitespace-nowrap align-middle text-right">
         {dayDot ? (
-          <span className="px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md text-xs font-bold font-mono-num bg-[#006241]/10 text-[#006241] dark:bg-[#34C759]/15 dark:text-[#34C759] inline-block">
+          <span className="px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md text-xs font-medium font-mono-num bg-[#006241]/10 text-[#006241] dark:bg-[#34C759]/15 dark:text-[#34C759] inline-block">
             {dayDot}
           </span>
         ) : (

@@ -69,13 +69,20 @@ export const Header: React.FC<HeaderProps> = ({
   return (
     <header className="sticky top-0 z-50 bg-[#F2F2F7]/90 dark:bg-[#000000]/90 backdrop-blur-xl border-b border-black/[0.08] dark:border-white/[0.12] px-[0.7rem] sm:px-4 lg:px-6 py-2.5">
       <div className="max-w-7xl mx-auto flex items-center justify-between gap-2">
-        {/* Left: Day of week, Date, and 24h Timestamp */}
-        <div className="flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-[#1C1C1E] dark:text-[#FFFFFF] select-none">
-          <span>{weekday},</span>
-          <span className="text-[#3C3C43] dark:text-[#EBEBF5]">{dateFormatted}</span>
-          <span className="text-[#8E8E93] dark:text-[#98989D] font-mono-num font-normal ml-1">
-            · {timeFormatted}
-          </span>
+        {/* Left: Starbucks Siren Logo + Day of week, Date, and 24h Timestamp */}
+        <div className="flex items-center gap-2 select-none">
+          <img
+            src="/starbucks_siren.svg"
+            alt="Starbucks"
+            className="w-4 h-4 sm:w-5.5 sm:h-5.5 rounded-full shrink-0"
+          />
+          <div className="flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-[#1C1C1E] dark:text-[#FFFFFF]">
+            <span>{weekday},</span>
+            <span className="text-[#3C3C43] dark:text-[#EBEBF5]">{dateFormatted}</span>
+            <span className="text-[#8E8E93] dark:text-[#98989D] font-mono-num font-normal ml-0.5">
+              · {timeFormatted}
+            </span>
+          </div>
         </div>
 
         {/* Right: Compact Locale Switcher + Circular Theme Toggle */}
@@ -174,7 +181,7 @@ export const Header: React.FC<HeaderProps> = ({
           >
             <span>Views</span>
             <svg
-              className={`w-3.5 h-3.5 transition-transform duration-150 ${
+              className={`w-3.5 h-3.5 transition-transform duration-200 ease-out ${
                 isViewDropdownOpen ? 'rotate-180' : ''
               }`}
               viewBox="0 0 24 24"
@@ -190,44 +197,46 @@ export const Header: React.FC<HeaderProps> = ({
             </svg>
           </button>
 
-          {/* Views Floating Dropdown Menu */}
-          {isViewDropdownOpen && (
-            <div className="absolute left-0 top-full mt-1.5 w-60 bg-white dark:bg-[#1C1C1E] border border-black/[0.1] dark:border-white/[0.15] rounded-xl shadow-lg p-1.5 z-50 flex flex-col gap-1">
-              {VIEW_OPTIONS.map((opt) => {
-                const isSelected = view === opt.id;
-                return (
-                  <button
-                    key={opt.id}
-                    type="button"
-                    onClick={() => {
-                      onViewChange(opt.id);
-                      setIsViewDropdownOpen(false);
-                    }}
-                    className={`flex items-center justify-between w-full px-3 py-2 rounded-lg text-xs font-medium text-left transition-colors ${
-                      isSelected
-                        ? 'bg-[#006241] text-white font-semibold'
-                        : 'text-[#1C1C1E] dark:text-[#F2F2F7] hover:bg-black/[0.05] dark:hover:bg-white/[0.08]'
-                    }`}
-                  >
-                    <span>{opt.label}</span>
-                    {opt.isDefault && (
-                      <span
-                        className={`text-[10px] px-1.5 py-0.5 rounded font-bold uppercase tracking-wider ${
-                          isSelected
-                            ? 'bg-white/20 text-white'
-                            : 'bg-[#006241]/10 text-[#006241] dark:bg-[#34C759]/20 dark:text-[#34C759]'
-                        }`}
-                      >
-                        Default · Rec
-                      </span>
-                    )}
-                  </button>
-                );
-              })}
-            </div>
-          )}
+          {/* Views Floating Dropdown Menu with tactful scale & fade animation */}
+          <div
+            className={`absolute left-0 top-full mt-1.5 w-56 bg-white dark:bg-[#1C1C1E] border border-black/[0.08] dark:border-white/[0.12] rounded-xl shadow-lg p-1.5 z-50 flex flex-col gap-0.5 transition-all duration-150 ease-out origin-top-left ${
+              isViewDropdownOpen
+                ? 'opacity-100 scale-100 translate-y-0 pointer-events-auto'
+                : 'opacity-0 scale-95 -translate-y-1 pointer-events-none'
+            }`}
+          >
+            {VIEW_OPTIONS.map((opt) => {
+              const isSelected = view === opt.id;
+              return (
+                <button
+                  key={opt.id}
+                  type="button"
+                  onClick={() => {
+                    onViewChange(opt.id);
+                    setIsViewDropdownOpen(false);
+                  }}
+                  className={`flex items-center justify-between w-full px-3 py-2 rounded-lg text-xs font-medium text-left transition-colors ${
+                    isSelected
+                      ? 'bg-[#006241] text-white font-semibold'
+                      : 'text-[#1C1C1E] dark:text-[#F2F2F7] hover:bg-black/[0.05] dark:hover:bg-white/[0.08]'
+                  }`}
+                >
+                  <span>{opt.label}</span>
+                  {opt.isDefault && (
+                    <span
+                      className={`text-[11px] font-medium transition-colors ${
+                        isSelected ? 'text-white/80' : 'text-[#8E8E93] dark:text-[#98989D]'
+                      }`}
+                    >
+                      Default
+                    </span>
+                  )}
+                </button>
+              );
+            })}
+          </div>
 
-          {/* Mobile Search Input with fixed vertical alignment and proper pl-9 indent */}
+          {/* Mobile Search Input */}
           <div className="relative flex-1">
             <div className="absolute left-3 top-1/2 -translate-y-1/2 text-[#8E8E93] pointer-events-none flex items-center">
               <svg
@@ -299,13 +308,11 @@ export const Header: React.FC<HeaderProps> = ({
                   <span>{opt.label}</span>
                   {opt.isDefault && (
                     <span
-                      className={`text-[9px] px-1 py-0.5 rounded font-bold uppercase tracking-wider ${
-                        isSelected
-                          ? 'bg-white/20 text-white'
-                          : 'bg-[#006241]/10 text-[#006241] dark:bg-[#34C759]/20 dark:text-[#34C759]'
+                      className={`text-[10px] font-medium transition-colors ${
+                        isSelected ? 'text-white/80' : 'text-[#8E8E93] dark:text-[#98989D]'
                       }`}
                     >
-                      Default · Rec
+                      Default
                     </span>
                   )}
                 </button>
