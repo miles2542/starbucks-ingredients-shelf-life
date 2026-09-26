@@ -115,32 +115,32 @@ export const StationGrid: React.FC<StationGridProps> = ({
   }
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-6 sm:space-y-8">
       {/* Primary Stations 2-Column Split */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 items-start">
         {/* MASTRENA STATION */}
         {hasMastrena && (
-          <section className="bg-white dark:bg-[#1C1C1E] border border-black/[0.08] dark:border-white/[0.12] rounded-2xl p-6 lg:p-7 shadow-[0_2px_12px_rgba(0,0,0,0.03)] dark:shadow-[0_2px_12px_rgba(0,0,0,0.4)]">
-            <header className="pb-4 mb-5 border-b border-black/[0.06] dark:border-white/[0.08]">
+          <section className="bg-white dark:bg-[#1C1C1E] border border-black/[0.08] dark:border-white/[0.12] rounded-2xl p-3.5 sm:p-5 lg:p-7 shadow-[0_2px_12px_rgba(0,0,0,0.03)] dark:shadow-[0_2px_12px_rgba(0,0,0,0.4)]">
+            <header className="pb-3 mb-3.5 sm:pb-4 sm:mb-5 border-b border-black/[0.06] dark:border-white/[0.08]">
               <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2.5">
+                <div className="flex items-center gap-2">
                   {MastrenaIcon}
-                  <h2 className="text-base font-bold tracking-tight text-[#1C1C1E] dark:text-[#FFFFFF]">
+                  <h2 className="text-sm sm:text-base font-bold tracking-tight text-[#1C1C1E] dark:text-[#FFFFFF]">
                     Mastrena Station
                   </h2>
                 </div>
-                <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-black/[0.04] dark:bg-white/[0.08] text-[#8E8E93] dark:text-[#98989D] font-mono-num">
+                <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-black/[0.04] dark:bg-white/[0.08] text-[#8E8E93] dark:text-[#98989D] font-mono-num">
                   {mastrena.length} items
                 </span>
               </div>
-              <p className="text-xs text-[#8E8E93] dark:text-[#98989D] mt-1 pl-7.5">
+              <p className="text-[11px] sm:text-xs text-[#8E8E93] dark:text-[#98989D] mt-0.5 pl-7">
                 Hot Espresso Bar, Core Syrups & Dairy
               </p>
             </header>
 
             {mastrenaAmbient.length > 0 && (
-              <div className="bg-[#F9F9FB] dark:bg-[#252528] rounded-xl p-5 mb-5 border border-black/[0.04] dark:border-white/[0.06]">
-                <div className="text-xs font-bold text-[#1C1C1E] dark:text-[#FFFFFF] flex items-center gap-2 mb-3">
+              <div className="bg-[#F9F9FB] dark:bg-[#252528] rounded-xl p-2.5 sm:p-4 lg:p-5 mb-3.5 sm:mb-5 border border-black/[0.04] dark:border-white/[0.06]">
+                <div className="text-xs font-bold text-[#1C1C1E] dark:text-[#FFFFFF] flex items-center gap-2 mb-2.5">
                   <span className="w-2.5 h-2.5 rounded-xs bg-amber-500 inline-block" />
                   <span>{ambientLabel}</span>
                 </div>
@@ -149,8 +149,8 @@ export const StationGrid: React.FC<StationGridProps> = ({
             )}
 
             {mastrenaCold.length > 0 && (
-              <div className="bg-[#F9F9FB] dark:bg-[#252528] rounded-xl p-5 border border-black/[0.04] dark:border-white/[0.06]">
-                <div className="text-xs font-bold text-[#1C1C1E] dark:text-[#FFFFFF] flex items-center gap-2 mb-3">
+              <div className="bg-[#F9F9FB] dark:bg-[#252528] rounded-xl p-2.5 sm:p-4 lg:p-5 border border-black/[0.04] dark:border-white/[0.06]">
+                <div className="text-xs font-bold text-[#1C1C1E] dark:text-[#FFFFFF] flex items-center gap-2 mb-2.5">
                   <span className="w-2.5 h-2.5 rounded-xs bg-cyan-500 inline-block" />
                   <span>{coldLabel}</span>
                 </div>
@@ -162,27 +162,27 @@ export const StationGrid: React.FC<StationGridProps> = ({
 
         {/* CBS STATION */}
         {hasCbs && (
-          <section className="bg-white dark:bg-[#1C1C1E] border border-black/[0.08] dark:border-white/[0.12] rounded-2xl p-6 lg:p-7 shadow-[0_2px_12px_rgba(0,0,0,0.03)] dark:shadow-[0_2px_12px_rgba(0,0,0,0.4)]">
-            <header className="pb-4 mb-5 border-b border-black/[0.06] dark:border-white/[0.08]">
+          <section className="bg-white dark:bg-[#1C1C1E] border border-black/[0.08] dark:border-white/[0.12] rounded-2xl p-3.5 sm:p-5 lg:p-7 shadow-[0_2px_12px_rgba(0,0,0,0.03)] dark:shadow-[0_2px_12px_rgba(0,0,0,0.4)]">
+            <header className="pb-3 mb-3.5 sm:pb-4 sm:mb-5 border-b border-black/[0.06] dark:border-white/[0.08]">
               <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2.5">
+                <div className="flex items-center gap-2">
                   {CbsIcon}
-                  <h2 className="text-base font-bold tracking-tight text-[#1C1C1E] dark:text-[#FFFFFF]">
+                  <h2 className="text-sm sm:text-base font-bold tracking-tight text-[#1C1C1E] dark:text-[#FFFFFF]">
                     CBS Station
                   </h2>
                 </div>
-                <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-black/[0.04] dark:bg-white/[0.08] text-[#8E8E93] dark:text-[#98989D] font-mono-num">
+                <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-black/[0.04] dark:bg-white/[0.08] text-[#8E8E93] dark:text-[#98989D] font-mono-num">
                   {cbs.length} items
                 </span>
               </div>
-              <p className="text-xs text-[#8E8E93] dark:text-[#98989D] mt-1 pl-7.5">
+              <p className="text-[11px] sm:text-xs text-[#8E8E93] dark:text-[#98989D] mt-0.5 pl-7">
                 Cold Beverage Station, Refreshers & Frappuccinos
               </p>
             </header>
 
             {cbsAmbient.length > 0 && (
-              <div className="bg-[#F9F9FB] dark:bg-[#252528] rounded-xl p-5 mb-5 border border-black/[0.04] dark:border-white/[0.06]">
-                <div className="text-xs font-bold text-[#1C1C1E] dark:text-[#FFFFFF] flex items-center gap-2 mb-3">
+              <div className="bg-[#F9F9FB] dark:bg-[#252528] rounded-xl p-2.5 sm:p-4 lg:p-5 mb-3.5 sm:mb-5 border border-black/[0.04] dark:border-white/[0.06]">
+                <div className="text-xs font-bold text-[#1C1C1E] dark:text-[#FFFFFF] flex items-center gap-2 mb-2.5">
                   <span className="w-2.5 h-2.5 rounded-xs bg-amber-500 inline-block" />
                   <span>{ambientLabel}</span>
                 </div>
@@ -191,8 +191,8 @@ export const StationGrid: React.FC<StationGridProps> = ({
             )}
 
             {cbsCold.length > 0 && (
-              <div className="bg-[#F9F9FB] dark:bg-[#252528] rounded-xl p-5 border border-black/[0.04] dark:border-white/[0.06]">
-                <div className="text-xs font-bold text-[#1C1C1E] dark:text-[#FFFFFF] flex items-center gap-2 mb-3">
+              <div className="bg-[#F9F9FB] dark:bg-[#252528] rounded-xl p-2.5 sm:p-4 lg:p-5 border border-black/[0.04] dark:border-white/[0.06]">
+                <div className="text-xs font-bold text-[#1C1C1E] dark:text-[#FFFFFF] flex items-center gap-2 mb-2.5">
                   <span className="w-2.5 h-2.5 rounded-xs bg-cyan-500 inline-block" />
                   <span>{coldLabel}</span>
                 </div>
@@ -206,53 +206,53 @@ export const StationGrid: React.FC<StationGridProps> = ({
       {/* Auxiliary Stations */}
       {(hasCondiment || hasOthers) && (
         <div className="pt-4 border-t border-black/[0.08] dark:border-white/[0.1]">
-          <h3 className="text-xs font-bold text-[#8E8E93] dark:text-[#98989D] mb-4">
+          <h3 className="text-xs font-bold text-[#8E8E93] dark:text-[#98989D] mb-3 sm:mb-4">
             Auxiliary & Storage Stations
           </h3>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 items-start">
             {hasCondiment && (
-              <section className="bg-white dark:bg-[#1C1C1E] border border-black/[0.08] dark:border-white/[0.12] rounded-2xl p-6 lg:p-7 shadow-[0_2px_12px_rgba(0,0,0,0.03)] dark:shadow-[0_2px_12px_rgba(0,0,0,0.4)]">
-                <header className="pb-4 mb-5 border-b border-black/[0.06] dark:border-white/[0.08]">
+              <section className="bg-white dark:bg-[#1C1C1E] border border-black/[0.08] dark:border-white/[0.12] rounded-2xl p-3.5 sm:p-5 lg:p-7 shadow-[0_2px_12px_rgba(0,0,0,0.03)] dark:shadow-[0_2px_12px_rgba(0,0,0,0.4)]">
+                <header className="pb-3 mb-3.5 sm:pb-4 sm:mb-5 border-b border-black/[0.06] dark:border-white/[0.08]">
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2.5">
+                    <div className="flex items-center gap-2">
                       {CondimentIcon}
-                      <h2 className="text-base font-bold tracking-tight text-[#1C1C1E] dark:text-[#FFFFFF]">
+                      <h2 className="text-sm sm:text-base font-bold tracking-tight text-[#1C1C1E] dark:text-[#FFFFFF]">
                         Condiment Bar
                       </h2>
                     </div>
-                    <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-black/[0.04] dark:bg-white/[0.08] text-[#8E8E93] dark:text-[#98989D] font-mono-num">
+                    <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-black/[0.04] dark:bg-white/[0.08] text-[#8E8E93] dark:text-[#98989D] font-mono-num">
                       {condiment.length} items
                     </span>
                   </div>
-                  <p className="text-xs text-[#8E8E93] dark:text-[#98989D] mt-1 pl-7.5">
+                  <p className="text-[11px] sm:text-xs text-[#8E8E93] dark:text-[#98989D] mt-0.5 pl-7">
                     Sugar Jars, Powders & Self-Serve Station
                   </p>
                 </header>
-                <div className="bg-[#F9F9FB] dark:bg-[#252528] rounded-xl p-5 border border-black/[0.04] dark:border-white/[0.06]">
+                <div className="bg-[#F9F9FB] dark:bg-[#252528] rounded-xl p-2.5 sm:p-4 lg:p-5 border border-black/[0.04] dark:border-white/[0.06]">
                   <StationTable items={condiment} locale={locale} />
                 </div>
               </section>
             )}
 
             {hasOthers && (
-              <section className="bg-white dark:bg-[#1C1C1E] border border-black/[0.08] dark:border-white/[0.12] rounded-2xl p-6 lg:p-7 shadow-[0_2px_12px_rgba(0,0,0,0.03)] dark:shadow-[0_2px_12px_rgba(0,0,0,0.4)]">
-                <header className="pb-4 mb-5 border-b border-black/[0.06] dark:border-white/[0.08]">
+              <section className="bg-white dark:bg-[#1C1C1E] border border-black/[0.08] dark:border-white/[0.12] rounded-2xl p-3.5 sm:p-5 lg:p-7 shadow-[0_2px_12px_rgba(0,0,0,0.03)] dark:shadow-[0_2px_12px_rgba(0,0,0,0.4)]">
+                <header className="pb-3 mb-3.5 sm:pb-4 sm:mb-5 border-b border-black/[0.06] dark:border-white/[0.08]">
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2.5">
+                    <div className="flex items-center gap-2">
                       {OthersIcon}
-                      <h2 className="text-base font-bold tracking-tight text-[#1C1C1E] dark:text-[#FFFFFF]">
+                      <h2 className="text-sm sm:text-base font-bold tracking-tight text-[#1C1C1E] dark:text-[#FFFFFF]">
                         Others & Storage
                       </h2>
                     </div>
-                    <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-black/[0.04] dark:bg-white/[0.08] text-[#8E8E93] dark:text-[#98989D] font-mono-num">
+                    <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-black/[0.04] dark:bg-white/[0.08] text-[#8E8E93] dark:text-[#98989D] font-mono-num">
                       {others.length} items
                     </span>
                   </div>
-                  <p className="text-xs text-[#8E8E93] dark:text-[#98989D] mt-1 pl-7.5">
+                  <p className="text-[11px] sm:text-xs text-[#8E8E93] dark:text-[#98989D] mt-0.5 pl-7">
                     Cadence Brewed Coffee, Filter Bags & Bulk Beans
                   </p>
                 </header>
-                <div className="bg-[#F9F9FB] dark:bg-[#252528] rounded-xl p-5 border border-black/[0.04] dark:border-white/[0.06]">
+                <div className="bg-[#F9F9FB] dark:bg-[#252528] rounded-xl p-2.5 sm:p-4 lg:p-5 border border-black/[0.04] dark:border-white/[0.06]">
                   <StationTable items={others} locale={locale} />
                 </div>
               </section>

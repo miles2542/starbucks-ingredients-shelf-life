@@ -17,14 +17,14 @@ export const StationTable: React.FC<StationTableProps> = ({ items, locale }): Re
   }
 
   return (
-    <div className="overflow-x-auto">
+    <div className="overflow-x-auto -mx-1 sm:mx-0">
       <table className="w-full text-left border-collapse">
         <thead>
           <tr className="border-b border-black/[0.08] dark:border-white/[0.1] text-[11px] font-semibold text-[#8E8E93] dark:text-[#98989D]">
-            <th className="px-3 pb-2.5 font-semibold">Ingredient</th>
-            <th className="px-3 pb-2.5 font-semibold w-28">Shelf Life</th>
-            <th className="px-3 pb-2.5 font-semibold w-40">Dosing Spoon</th>
-            <th className="px-3 pb-2.5 font-semibold w-28 text-right">Day-Dot</th>
+            <th className="px-2 sm:px-3 pb-2 font-semibold">Ingredient</th>
+            <th className="px-2 sm:px-3 pb-2 font-semibold w-24 sm:w-28">Shelf Life</th>
+            <th className="px-2 sm:px-3 pb-2 font-semibold w-32 sm:w-40">Dosing Spoon</th>
+            <th className="px-2 sm:px-3 pb-2 font-semibold w-24 sm:w-28 text-right">Day-Dot</th>
           </tr>
         </thead>
         <tbody>
