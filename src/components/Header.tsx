@@ -72,7 +72,7 @@ export const Header: React.FC<HeaderProps> = ({
         {/* Left: Starbucks Siren Logo + Day of week, Date, and 24h Timestamp */}
         <div className="flex items-center gap-1.5 sm:gap-2 select-none shrink-0 min-w-0">
           <img
-            src="/starbucks_siren.svg"
+            src="/starbucks_siren.svg?v=3"
             alt="Starbucks"
             className="w-4 h-4 sm:w-5.5 sm:h-5.5 rounded-full shrink-0"
           />
