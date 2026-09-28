@@ -1,6 +1,7 @@
 import type React from 'react';
 import type { Ingredient, LocaleMode } from '../types/ingredient.ts';
 import { formatDayDot } from '../utils/dayDot.ts';
+import { formatDosingTool } from '../utils/dosingTool.ts';
 
 interface IngredientRowProps {
   ingredient: Ingredient;
@@ -11,7 +12,8 @@ export const IngredientRow: React.FC<IngredientRowProps> = ({
   ingredient,
   locale,
 }): React.JSX.Element => {
-  const dayDot = formatDayDot(ingredient.shelfLifeDays);
+  const dayDot = formatDayDot(ingredient.shelfLifeDays, ingredient.shelfLifeDisplay);
+  const dosingToolDisplay = formatDosingTool(ingredient.dosingTool, locale);
 
   let nameDisplay: React.JSX.Element;
   if (locale === 'en') {
@@ -49,7 +51,7 @@ export const IngredientRow: React.FC<IngredientRowProps> = ({
         {ingredient.shelfLifeDisplay}
       </td>
       <td className="py-2.5 sm:py-3 px-2 sm:px-3 whitespace-nowrap align-middle text-left text-xs text-[#636366] dark:text-[#AEAEB2]">
-        {ingredient.dosingTool}
+        {dosingToolDisplay}
       </td>
       <td className="py-2.5 sm:py-3 px-2 sm:px-3 whitespace-nowrap align-middle text-right">
         {dayDot ? (

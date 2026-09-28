@@ -1,16 +1,31 @@
 const DAY_NAMES = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'] as const;
 
 /**
- * Calculates the Day-Dot expiration label for a given shelf-life in days.
- * Returns null for sub-day (hours or immediate) items, which do not receive a multi-day day-dot.
+ * Calculates the Day-Dot expiration label for an ingredient.
+ * - Sub-day items (shelfLifeDays <= 0, e.g. "60 minutes", "Immediate", "8 hours") return null ('–').
+ * - "1 day" (end of current operational day) returns today's date (same day).
+ * - "24 hours" returns tomorrow's date (today + 24 hours / 1 day).
+ * - Multi-day (shelfLifeDays > 0) returns today + shelfLifeDays.
  */
-export function formatDayDot(days: number, baseDate: Date = new Date()): string | null {
-  if (days <= 0 || !Number.isFinite(days)) {
+export function formatDayDot(
+  shelfLifeDays: number,
+  shelfLifeDisplay: string,
+  baseDate: Date = new Date(),
+): string | null {
+  if (shelfLifeDays <= 0 || !Number.isFinite(shelfLifeDays)) {
     return null;
   }
 
-  // Calculate target date by adding days in milliseconds
-  const targetDate = new Date(baseDate.getTime() + days * 86_400_000);
+  // "1 day" shelf life expires at end of current operating day (same day / today)
+  if (shelfLifeDisplay === '1 day') {
+    const dayName = DAY_NAMES[baseDate.getDay()];
+    const date = baseDate.getDate();
+    const month = baseDate.getMonth() + 1;
+    return `${dayName} · ${date}/${month}`;
+  }
+
+  // "24 hours" and multi-day items add shelfLifeDays to baseDate
+  const targetDate = new Date(baseDate.getTime() + shelfLifeDays * 86_400_000);
   const dayName = DAY_NAMES[targetDate.getDay()];
   const date = targetDate.getDate();
   const month = targetDate.getMonth() + 1;

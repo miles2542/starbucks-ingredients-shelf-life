@@ -8,7 +8,15 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.svg'],
+      includeAssets: [
+        'favicon.svg',
+        'starbucks_siren.svg',
+        'apple-touch-icon.png',
+        'favicon-32x32.png',
+        'favicon-16x16.png',
+        'pwa-192x192.png',
+        'pwa-512x512.png',
+      ],
       manifest: {
         name: 'Starbucks Shelf Life',
         short_name: 'Shelf Life',
@@ -19,10 +27,25 @@ export default defineConfig({
         orientation: 'portrait',
         icons: [
           {
-            src: '/favicon.svg',
+            src: '/pwa-192x192.png',
+            sizes: '192x192',
+            type: 'image/png',
+          },
+          {
+            src: '/pwa-512x512.png',
+            sizes: '512x512',
+            type: 'image/png',
+          },
+          {
+            src: '/pwa-512x512.png',
+            sizes: '512x512',
+            type: 'image/png',
+            purpose: 'any maskable',
+          },
+          {
+            src: '/starbucks_siren.svg',
             sizes: 'any',
             type: 'image/svg+xml',
-            purpose: 'any maskable',
           },
         ],
       },

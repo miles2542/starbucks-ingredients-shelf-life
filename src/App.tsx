@@ -104,6 +104,10 @@ export default function App(): React.JSX.Element {
             </a>
           </div>
         </div>
+        <div className="max-w-7xl mx-auto mt-3 pt-3 border-t border-black/[0.04] dark:border-white/[0.06] text-center text-[11px] text-[#8E8E93] dark:text-[#636366]">
+          Independent reference tool. Not affiliated with, sponsored, or endorsed by Starbucks
+          Coffee Company.
+        </div>
       </footer>
     </div>
   );

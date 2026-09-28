@@ -40,7 +40,7 @@ export const INGREDIENTS: readonly Ingredient[] = [
     category: 'Sauce',
     storage: 'ambient',
     shelfLifeDays: 1,
-    shelfLifeDisplay: '1 day',
+    shelfLifeDisplay: '24 hours',
     dosingTool: '–',
   },
   {
@@ -52,7 +52,7 @@ export const INGREDIENTS: readonly Ingredient[] = [
     category: 'Sauce',
     storage: 'ambient',
     shelfLifeDays: 1,
-    shelfLifeDisplay: '1 day',
+    shelfLifeDisplay: '24 hours',
     dosingTool: '–',
   },
   {
@@ -164,7 +164,7 @@ export const INGREDIENTS: readonly Ingredient[] = [
     category: 'Milk',
     storage: 'refrigerated',
     shelfLifeDays: 1,
-    shelfLifeDisplay: '1 day',
+    shelfLifeDisplay: '24 hours',
     dosingTool: '–',
   },
   {
@@ -248,7 +248,7 @@ export const INGREDIENTS: readonly Ingredient[] = [
     category: 'Milk',
     storage: 'refrigerated',
     shelfLifeDays: 1,
-    shelfLifeDisplay: '1 day',
+    shelfLifeDisplay: '24 hours',
     dosingTool: '–',
   },
   {
@@ -640,7 +640,7 @@ export const INGREDIENTS: readonly Ingredient[] = [
     category: 'Other Bev. Ingredients',
     storage: 'refrigerated',
     shelfLifeDays: 1,
-    shelfLifeDisplay: '1 day',
+    shelfLifeDisplay: '24 hours',
     dosingTool: '–',
   },
   {
@@ -724,7 +724,7 @@ export const INGREDIENTS: readonly Ingredient[] = [
     category: 'Sauce',
     storage: 'refrigerated',
     shelfLifeDays: 1,
-    shelfLifeDisplay: '1 day',
+    shelfLifeDisplay: '24 hours',
     dosingTool: '15ml spoon (thìa 15ml)',
   },
   {
@@ -752,7 +752,7 @@ export const INGREDIENTS: readonly Ingredient[] = [
     category: 'Condiment Bar',
     storage: 'ambient',
     shelfLifeDays: 1,
-    shelfLifeDisplay: '1 day',
+    shelfLifeDisplay: '24 hours',
     dosingTool: '–',
   },
   {

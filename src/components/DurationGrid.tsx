@@ -14,7 +14,7 @@ interface DurationBucket {
 
 const DURATION_BUCKETS: readonly DurationBucket[] = [
   { label: 'Immediate & Sub-day (< 24 hours)', days: [0] },
-  { label: '1 Day (24 hours)', days: [1] },
+  { label: '24 Hours & 1 Day', days: [1] },
   { label: '2 – 3 Days', days: [2, 3] },
   { label: '5 – 7 Days', days: [5, 7] },
   { label: '14 Days (2 weeks)', days: [14] },

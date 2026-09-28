@@ -55,11 +55,11 @@ export const Header: React.FC<HeaderProps> = ({
   }, []);
 
   const weekday = currentTime.toLocaleDateString('en-US', { weekday: 'short' });
-  const dateFormatted = currentTime.toLocaleDateString('en-GB', {
+  const dayMonthFormatted = currentTime.toLocaleDateString('en-GB', {
     day: 'numeric',
     month: 'short',
-    year: 'numeric',
   });
+  const yearFormatted = currentTime.getFullYear();
   const timeFormatted = currentTime.toLocaleTimeString('en-GB', {
     hour: '2-digit',
     minute: '2-digit',
@@ -70,15 +70,18 @@ export const Header: React.FC<HeaderProps> = ({
     <header className="sticky top-0 z-50 bg-[#F2F2F7]/90 dark:bg-[#000000]/90 backdrop-blur-xl border-b border-black/[0.08] dark:border-white/[0.12] px-[0.7rem] sm:px-4 lg:px-6 py-2.5">
       <div className="max-w-7xl mx-auto flex items-center justify-between gap-2">
         {/* Left: Starbucks Siren Logo + Day of week, Date, and 24h Timestamp */}
-        <div className="flex items-center gap-2 select-none">
+        <div className="flex items-center gap-1.5 sm:gap-2 select-none shrink-0 min-w-0">
           <img
             src="/starbucks_siren.svg"
             alt="Starbucks"
             className="w-4 h-4 sm:w-5.5 sm:h-5.5 rounded-full shrink-0"
           />
-          <div className="flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-[#1C1C1E] dark:text-[#FFFFFF]">
+          <div className="flex items-center gap-1 sm:gap-1.5 text-xs sm:text-sm font-semibold text-[#1C1C1E] dark:text-[#FFFFFF] whitespace-nowrap">
             <span>{weekday},</span>
-            <span className="text-[#3C3C43] dark:text-[#EBEBF5]">{dateFormatted}</span>
+            <span className="text-[#3C3C43] dark:text-[#EBEBF5]">
+              {dayMonthFormatted}
+              <span className="hidden sm:inline"> {yearFormatted}</span>
+            </span>
             <span className="text-[#8E8E93] dark:text-[#98989D] font-mono-num font-normal ml-0.5">
               · {timeFormatted}
             </span>
