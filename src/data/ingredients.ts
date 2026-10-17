@@ -467,8 +467,8 @@ export const INGREDIENTS: readonly Ingredient[] = [
     subStationZone: 'ambient',
     category: 'Other Bev. Ingredients',
     storage: 'ambient',
-    shelfLifeDays: 5,
-    shelfLifeDisplay: '5 days',
+    shelfLifeDays: 3,
+    shelfLifeDisplay: '3 days',
     dosingTool: '2 tbsp',
   },
   {
