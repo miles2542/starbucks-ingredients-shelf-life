@@ -130,7 +130,7 @@ export const INGREDIENTS: readonly Ingredient[] = [
   {
     id: 'brown-sugar-syrup',
     nameEn: 'Brown Sugar Syrup',
-    nameVi: '',
+    nameVi: 'Đường nâu',
     station: 'mastrena',
     subStationZone: 'ambient',
     category: 'Syrup',
@@ -158,7 +158,7 @@ export const INGREDIENTS: readonly Ingredient[] = [
   {
     id: 'whole-milk',
     nameEn: 'Whole Milk',
-    nameVi: 'Sữa tươi thanh trùng',
+    nameVi: 'Sữa tươi thanh trùng (Đà Lạt)',
     station: 'mastrena',
     subStationZone: 'refrigerated',
     category: 'Milk',
@@ -254,7 +254,7 @@ export const INGREDIENTS: readonly Ingredient[] = [
   {
     id: 'vsccb',
     nameEn: 'Vanilla Sweet Cream (VSCCB)',
-    nameVi: 'kem ngọt vanilla',
+    nameVi: 'Kem ngọt vanilla',
     station: 'mastrena',
     subStationZone: 'refrigerated',
     category: 'Other Bev. Ingredients',
@@ -302,7 +302,7 @@ export const INGREDIENTS: readonly Ingredient[] = [
   {
     id: 'cold-brew-concentrate',
     nameEn: 'Cold Brew Concentrate',
-    nameVi: 'Cốt cà phê cold brew',
+    nameVi: 'Cốt cà phê ủ lạnh cold brew',
     station: 'mastrena',
     subStationZone: 'refrigerated',
     category: 'Coffee and Tea',
@@ -414,7 +414,7 @@ export const INGREDIENTS: readonly Ingredient[] = [
   {
     id: 'pure-matcha-powder',
     nameEn: 'Pure Matcha Powder',
-    nameVi: 'Bột pure Matcha',
+    nameVi: 'Bột Pure Matcha',
     station: 'cbs',
     subStationZone: 'ambient',
     category: 'Powder',
@@ -634,7 +634,7 @@ export const INGREDIENTS: readonly Ingredient[] = [
   {
     id: 'whipping-cream',
     nameEn: 'Whipping Cream',
-    nameVi: 'Kem đánh whipping',
+    nameVi: 'Kem lắc whipping',
     station: 'cbs',
     subStationZone: 'refrigerated',
     category: 'Other Bev. Ingredients',

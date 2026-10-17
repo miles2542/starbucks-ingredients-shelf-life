@@ -95,11 +95,10 @@ export const Header: React.FC<HeaderProps> = ({
             <button
               type="button"
               onClick={() => onLocaleChange('dual')}
-              className={`px-2 py-0.5 rounded-md font-bold transition-all ${
-                locale === 'dual'
-                  ? 'bg-white dark:bg-[#2C2C2E] shadow-xs text-[#1C1C1E] dark:text-white'
-                  : 'text-[#636366] dark:text-[#AEAEB2] hover:text-[#1C1C1E] dark:hover:text-white'
-              }`}
+              className={`px-2 py-0.5 rounded-md font-bold transition-all ${locale === 'dual'
+                ? 'bg-white dark:bg-[#2C2C2E] shadow-xs text-[#1C1C1E] dark:text-white'
+                : 'text-[#636366] dark:text-[#AEAEB2] hover:text-[#1C1C1E] dark:hover:text-white'
+                }`}
               title="Dual English & Vietnamese (Recommended)"
             >
               Dual
@@ -107,22 +106,20 @@ export const Header: React.FC<HeaderProps> = ({
             <button
               type="button"
               onClick={() => onLocaleChange('en')}
-              className={`px-2 py-0.5 rounded-md font-medium transition-all ${
-                locale === 'en'
-                  ? 'bg-white dark:bg-[#2C2C2E] shadow-xs text-[#1C1C1E] dark:text-white'
-                  : 'text-[#636366] dark:text-[#AEAEB2] hover:text-[#1C1C1E] dark:hover:text-white'
-              }`}
+              className={`px-2 py-0.5 rounded-md font-medium transition-all ${locale === 'en'
+                ? 'bg-white dark:bg-[#2C2C2E] shadow-xs text-[#1C1C1E] dark:text-white'
+                : 'text-[#636366] dark:text-[#AEAEB2] hover:text-[#1C1C1E] dark:hover:text-white'
+                }`}
             >
               En
             </button>
             <button
               type="button"
               onClick={() => onLocaleChange('vi')}
-              className={`px-2 py-0.5 rounded-md font-medium transition-all ${
-                locale === 'vi'
-                  ? 'bg-white dark:bg-[#2C2C2E] shadow-xs text-[#1C1C1E] dark:text-white'
-                  : 'text-[#636366] dark:text-[#AEAEB2] hover:text-[#1C1C1E] dark:hover:text-white'
-              }`}
+              className={`px-2 py-0.5 rounded-md font-medium transition-all ${locale === 'vi'
+                ? 'bg-white dark:bg-[#2C2C2E] shadow-xs text-[#1C1C1E] dark:text-white'
+                : 'text-[#636366] dark:text-[#AEAEB2] hover:text-[#1C1C1E] dark:hover:text-white'
+                }`}
             >
               Vi
             </button>
@@ -184,9 +181,8 @@ export const Header: React.FC<HeaderProps> = ({
           >
             <span>Views</span>
             <svg
-              className={`w-3.5 h-3.5 transition-transform duration-200 ease-out ${
-                isViewDropdownOpen ? 'rotate-180' : ''
-              }`}
+              className={`w-3.5 h-3.5 transition-transform duration-200 ease-out ${isViewDropdownOpen ? 'rotate-180' : ''
+                }`}
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -202,11 +198,10 @@ export const Header: React.FC<HeaderProps> = ({
 
           {/* Views Floating Dropdown Menu with tactful scale & fade animation */}
           <div
-            className={`absolute left-0 top-full mt-1.5 w-56 bg-white dark:bg-[#1C1C1E] border border-black/[0.08] dark:border-white/[0.12] rounded-xl shadow-lg p-1.5 z-50 flex flex-col gap-0.5 transition-all duration-150 ease-out origin-top-left ${
-              isViewDropdownOpen
-                ? 'opacity-100 scale-100 translate-y-0 pointer-events-auto'
-                : 'opacity-0 scale-95 -translate-y-1 pointer-events-none'
-            }`}
+            className={`absolute left-0 top-full mt-1.5 w-56 bg-white dark:bg-[#1C1C1E] border border-black/[0.08] dark:border-white/[0.12] rounded-xl shadow-lg p-1.5 z-50 flex flex-col gap-0.5 transition-all duration-150 ease-out origin-top-left ${isViewDropdownOpen
+              ? 'opacity-100 scale-100 translate-y-0 pointer-events-auto'
+              : 'opacity-0 scale-95 -translate-y-1 pointer-events-none'
+              }`}
           >
             {VIEW_OPTIONS.map((opt) => {
               const isSelected = view === opt.id;
@@ -218,18 +213,16 @@ export const Header: React.FC<HeaderProps> = ({
                     onViewChange(opt.id);
                     setIsViewDropdownOpen(false);
                   }}
-                  className={`flex items-center justify-between w-full px-3 py-2 rounded-lg text-xs font-medium text-left transition-colors ${
-                    isSelected
-                      ? 'bg-[#006241] text-white font-semibold'
-                      : 'text-[#1C1C1E] dark:text-[#F2F2F7] hover:bg-black/[0.05] dark:hover:bg-white/[0.08]'
-                  }`}
+                  className={`flex items-center justify-between w-full px-3 py-2 rounded-lg text-xs font-medium text-left transition-colors ${isSelected
+                    ? 'bg-[#006241] text-white font-semibold'
+                    : 'text-[#1C1C1E] dark:text-[#F2F2F7] hover:bg-black/[0.05] dark:hover:bg-white/[0.08]'
+                    }`}
                 >
                   <span>{opt.label}</span>
                   {opt.isDefault && (
                     <span
-                      className={`text-[11px] font-medium transition-colors ${
-                        isSelected ? 'text-white/80' : 'text-[#8E8E93] dark:text-[#98989D]'
-                      }`}
+                      className={`text-[11px] font-medium transition-colors ${isSelected ? 'text-white/80' : 'text-[#8E8E93] dark:text-[#98989D]'
+                        }`}
                     >
                       Default
                     </span>
@@ -261,7 +254,7 @@ export const Header: React.FC<HeaderProps> = ({
               type="text"
               value={searchQuery}
               onChange={(e) => onSearchChange(e.target.value)}
-              placeholder="Search ingredients (Eng and Vie)"
+              placeholder="Search anything (Eng and Vie)"
               className="w-full h-9 text-xs pl-9 pr-8 rounded-xl bg-white dark:bg-[#1C1C1E] border border-black/[0.1] dark:border-white/[0.12] text-[#1C1C1E] dark:text-white placeholder-[#8E8E93] focus:ring-2 focus:ring-[#006241]/40 focus:border-[#006241] shadow-xs font-normal transition-all"
             />
             {searchQuery ? (
@@ -302,18 +295,16 @@ export const Header: React.FC<HeaderProps> = ({
                   key={opt.id}
                   type="button"
                   onClick={() => onViewChange(opt.id)}
-                  className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl font-semibold transition-all shrink-0 ${
-                    isSelected
-                      ? 'bg-[#006241] text-white shadow-xs'
-                      : 'bg-black/[0.05] dark:bg-white/[0.08] text-[#636366] dark:text-[#AEAEB2] hover:bg-black/[0.08]'
-                  }`}
+                  className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl font-semibold transition-all shrink-0 ${isSelected
+                    ? 'bg-[#006241] text-white shadow-xs'
+                    : 'bg-black/[0.05] dark:bg-white/[0.08] text-[#636366] dark:text-[#AEAEB2] hover:bg-black/[0.08]'
+                    }`}
                 >
                   <span>{opt.label}</span>
                   {opt.isDefault && (
                     <span
-                      className={`text-[10px] font-medium transition-colors ${
-                        isSelected ? 'text-white/80' : 'text-[#8E8E93] dark:text-[#98989D]'
-                      }`}
+                      className={`text-[10px] font-medium transition-colors ${isSelected ? 'text-white/80' : 'text-[#8E8E93] dark:text-[#98989D]'
+                        }`}
                     >
                       Default
                     </span>
@@ -345,7 +336,7 @@ export const Header: React.FC<HeaderProps> = ({
               type="text"
               value={searchQuery}
               onChange={(e) => onSearchChange(e.target.value)}
-              placeholder="Search ingredients (Eng and Vie)"
+              placeholder="Search anything (Eng and Vie)"
               className="w-full text-xs py-2 pl-9 pr-9 rounded-xl bg-white dark:bg-[#1C1C1E] border border-black/[0.08] dark:border-white/[0.12] text-[#1C1C1E] dark:text-white placeholder-[#8E8E93] focus:ring-2 focus:ring-[#006241]/40 focus:border-[#006241] shadow-xs font-normal"
             />
             {searchQuery ? (
